@@ -54,7 +54,7 @@ Configure nginx for the next.js app
 
     server {
             listen 80;
-            server_name ubuntu-next-app.abdullahilgaz.com; # !!! - change to your domain name 
+            server_name next-app.com; # !!! - change to your domain name 
           gzip on;
             gzip_proxied any;
             gzip_types application/javascript application/x-javascript text/css text/javascript;
@@ -63,7 +63,7 @@ Configure nginx for the next.js app
             gzip_min_length 256;
     
         location /_next/static/ {
-                    alias /var/www/next-app/.next/static/; # !!! - change to your app name
+                    alias /var/www/next-app/.next/static/; # !!! - change to your app name and path
                     expires 365d;
                     access_log off;
             }
